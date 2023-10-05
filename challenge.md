@@ -12,7 +12,7 @@ Your discovered data must have a row for each county in the US with variables (c
 2. Evaluate the other groups' described data they are building and make sure your team is not duplicating effort.
 3. Create a folder with a descriptive name of your data (E.g., `residential_permits`)
 4. Create a data digestion script with the same name as your folder in the main section of the repository (E.g., `residential_permits.py`)
-5. Write your `.parquet` files into your respective folder with at least five chunked files, and no file is larger than 10 MB.
+5. Write your `.parquet` files into your respective folder with at least five chunked files, and no file is larger than 20 MB.
 6. Create a data dictionary in the main section of the repository (E.g., `residential_permits.md` that describes each column in your data set.
 7. Work with your team to have one pull request that returns this data to the central repository.
 
