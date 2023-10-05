@@ -1,0 +1,8 @@
+- __fips:__ The Federal Information Prcessing ([FIPS](https://www.nist.gov/standardsgov/compliance-faqs-federal-information-processing-standards-fips)) ID for each county.
+- __name:__ The name of the county
+- __state_name:__ The name of the state. [See map](https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf).
+- __region_name:__ The name of the region of the US. [See map](https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf).
+- __division_name:__ The name of the division. [See map](https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf).
+- __state:__ Official number of the state.
+- __region:__ Official region number.
+- __division:__ Official division number.
