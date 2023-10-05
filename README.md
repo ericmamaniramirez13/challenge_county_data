@@ -4,11 +4,11 @@ You can read the details of the challenge at [challenge.md](challenge.md)
 
 ## Key Items
 
-- __Due Date:__ A date
-- __Work Rules:__ Can you work with others, who, other rules.
-- __Product:__ Summarized items to be delivered. Provide more details in the deliverable section.
-- __Github Process:__ Each student will fork the challenge repository and then create a folder `LASTNAME_FIRSTINITIAL` with the files shown in [hathaway_j](hathaway_J). Then you will submit a pull request to get your files back into the main challenge repository.
-- __Canvas Process:__ Each student will upload a `.pdf` or `.html` files with your results as described in [challenge.md](challenge.md)
+- __Due Date:__ October 11th, 2023
+- __Work Rules:__ Your team can work together. All members should contribute to the end product.
+- __Product:__ A US data set with one row for each county. See [challenge.md](challenge.md) for details.
+- __Github Process:__ Each team will fork the challenge repository and then create a folder based on their data as described in [challenge.md](challenge.md). Then, you will submit a pull request to get your files back into the main challenge repository.
+- __Canvas Process:__ None
 
 
 ## Notes & References
