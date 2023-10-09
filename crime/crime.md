@@ -8,5 +8,7 @@ This folder contains the crime dataset for the temple estimation project.
 
 | Column Name | Description | Importance |
 | --- | --- | --- |
-| fips | ID for counties. Must have the same number of rows as `county_meta` data (). | Key Column |
+| fips | Federal Information Processing ID for counties. Must have the same number of rows as `county_meta` data (3146 total). | Key Column |
 | col1 | description goes here | optional |
+
+* No state, county name columns. The `county_meta` dataset already has them.
