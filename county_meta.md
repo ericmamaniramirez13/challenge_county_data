@@ -9,6 +9,10 @@
 - __region:__ Official region number.
 - __division:__ Official division number.
 
+## Missingness
+
+I have no missing values.
+
 ## Table Snippet
 
 |    |   fips | name            | state_name   | region_name   | division_name      |   state |   region |   division |
