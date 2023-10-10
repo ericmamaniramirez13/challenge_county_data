@@ -3,6 +3,7 @@
 ## Cost of Living data set
 
 | Column Name | Description |
+|-----|------|
 | rent | Average monthly cost of rent |
 | food | Average monthly cost of food |
 | child_care | Average monthly cost of child_care |
