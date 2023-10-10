@@ -28,10 +28,22 @@ for i in values:
 # read in.
 df = pl.read_parquet("county_meta/*")
 df.shape
-# df
-# fips	name	state_name	region_name	division_name	state	region	division
-# i64	str	str	str	str	i64	i64	i64
-# 1001	"Autauga County…	"Alabama"	"South"	"East South Cen…	1	3	6
-# 1003	"Baldwin County…	"Alabama"	"South"	"East South Cen…	1	3	6
-# 1005	"Barbour County…	"Alabama"	"South"	"East South Cen…	1	3	6
-# 1007	"Bibb County"	"Alabama"	"South"	"East South Cen…	1	3	6
+df
+
+#%%
+population = pl.read_csv("ExternalCountyData/PopulationDensity.csv")\
+    .select("GEOID","B25010_001E","B25010_002E","B01001_001E","B01001_calc_PopDensity")\
+        .rename({"GEOID":"fips",
+                 "B25010_001E":"householdSize",
+                 "B25010_002E":"ownerHousehold","B01001_001E":"renterHouseholder",
+                 "B01001_001E":"countyPopulation",
+                 "B01001_calc_PopDensity":"countyPopDensity"})
+population
+
+#%%
+PDF = df\
+    .join(population,
+          on=["fips"],
+          how="inner")
+PDF
+# %%
