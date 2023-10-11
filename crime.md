@@ -31,4 +31,4 @@ This folder contains the crime dataset for the temple estimation project.
 | population | description goes here | optional |
 
 * No state, county name columns. The `county_meta` dataset already has them.
-* There is a miscelaneous row with -1 fips. We added to make it the same number of row as `county_meta`
+* There is a miscelaneous row with -1 fips. We added to make it the same number of row as `county_meta` (3146).
