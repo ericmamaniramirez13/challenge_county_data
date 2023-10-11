@@ -17,7 +17,7 @@
 
 ## Missingness
 
-For each year there are some counties that do not have their voting information recorded, therefore I was not able to make a calculation for whether or not they were a more leaning Dem or Rep.
+For each year there are some counties that do not have their voting information recorded, therefore, I was not able to make a calculation whether or not they were more leaning Dem or Rep.
 
 - As the years go on, there are less missing values.
   ex: The year 1868 had **1488** while years progressively have less null values concluding with the year 2020 had **98** missing values.
@@ -32,3 +32,5 @@ For each year there are some counties that do not have their voting information 
 | 1005 | "Rep" | "Rep" | "Dem" | "Dem" | "Dem" | "Dem" | "Dem" | "Dem" | "Dem" | "Dem" |
 | 1007 | "Rep" | "Rep" | "Dem" | "Dem" | "Dem" | "Dem" | "Dem" | "Dem" | "Dem" | "Dem" |
 | 1009 | "Rep" | "Rep" | "Dem" | "Dem" | "Dem" | "Dem" | "Dem" | "Dem" | "Dem" | "Dem" |
+
+ß
