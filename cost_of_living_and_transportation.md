@@ -2,38 +2,50 @@
 
 ## Cost of Living Dataset
 
-| Column Name | Description |
-|-----|------|
-| rent | Average monthly cost of rent |
-| food | Average monthly cost of food |
-| child_care | Average monthly cost of child_care |
-| transportation | Average monthly cost of transportation |
-| health_care | Average monthly cost of health_care |
-| other | Average monthly cost of other expenses |
-| taxes | Average monthly taxes |
-| total | Average monthly total cost of living |
-| total_annual | Average annual total cost of living |
+| Column Name     | Description                                 |
+| --------------- | ------------------------------------------- |
+| rent            | Average monthly cost of rent                |
+| food            | Average monthly cost of food                |
+| child_care      | Average monthly cost of child_care          |
+| transportation  | Average monthly cost of transportation      |
+| health_care     | Average monthly cost of health_care         |
+| other           | Average monthly cost of other expenses      |
+| taxes           | Average monthly taxes                       |
+| total           | Average monthly total cost of living        |
+| total_annual    | Average annual total cost of living         |
 | state_cost_rank | Rank for each state based on cost of living |
 
 ## [City County Energy Profiles](https://www.osti.gov/biblio/1788084)
-> Dataset Completed: 12/3/2019
-<br><br>
-This City and County Energy Profiles data lookup table provides modeled electricity and natural gas consumption and expenditures, on-road vehicle fuel consumption, and vehicle miles traveled for each U.S. city and county. Please note this data is modeled and more precise data may be available from regional, state, or other sources. The modeling approach for electricity and natural gas is described in Sector-Specific Methodologies for Subnational Energy Modeling: https://www.nrel.gov/docs/fy19osti/72748.pdf. For feedback or questions please contact: slope@nrel.gov.
 
-| Column Name | Units | Description | Source (if applicable) |
-|-----|------|---|---|
- | county_center_lat | | Latitude component of centroid coordinates or geometric center of the county | U.S. Census 2016 Gazetteer Files |
- | county_center_long | | Longitude component of centroid coordinates or geometric center of the county | [''](https://en.wikipedia.org/wiki/Ditto_mark) |
- | total_population | | County population count | U.S. Census 2012-2016 5-yr American Community Survey |
- | total_employment | | County-only employment count | U.S. Census 2016 County Business Patterns |
- | utility_customers | | Estimated electric utility or natural gas customers | NREL GIS mapping based on Ventyx/ABB Data and 2016 Energy Information Administration Survey Form 861 |
- | electric_consumption | MWH | Estimated total consumption of electricity by residential buildings | Ma, Ookie, Ricardo Oliveira, Evan Rosenlieb, and Megan Day. 2019. Sector-Specific Methodologies for Subnational Energy Modeling. Golden, CO: National Renewable Energy Laboratory. NREL/TP-7A40-72748. https://www.nrel.gov/docs/fy19osti/72748.pdf. |
- | electric_expenditure | '000 $ | Estimated total expenditure of electricity by residential buildings | '' |
- | electric_consumption_capita | MWH | Estimated per capita consumption of electricity by residential buildings | '' |
- | electric_expenditure_capita | '000 $ | Estimated per capita expenditure of electricity by residential buildings | '' |
- | gas_consumption | gallons | Modeled gasoline consumption by on-road vehicles within the county | '' |
- | gas_consumption_capita | gallons | Modeled gasoline consumption per capita by on-road vehicles within the county | '' |
- | diesel_consumption | gallons | Modeled diesel consumption by on-road vehicles within the selected county | '' |
- | diesel_consumption_capita | gallons | Modeled diesel consumption per capita by on-road vehicles within the county | '' |
- | county_vehicle_miles | miles | Estimated total vehicle miles for all on-road travel within the county | See methodology posted at: www.eere.energy.gov/sled under transportation. |
- | county_vehicle_miles_capita | miles | Estimated vehicle miles per capita for all on-road travel within the county | '' |
+> Dataset Completed: 12/3/2019
+> <br><br>
+> This City and County Energy Profiles data lookup table provides modeled electricity and natural gas consumption and expenditures, on-road vehicle fuel consumption, and vehicle miles traveled for each U.S. city and county. Please note this data is modeled and more precise data may be available from regional, state, or other sources. The modeling approach for electricity and natural gas is described in Sector-Specific Methodologies for Subnational Energy Modeling: https://www.nrel.gov/docs/fy19osti/72748.pdf. For feedback or questions please contact: slope@nrel.gov.
+
+| Column Name                 | Units   | Description                                                                   | Source (if applicable)                                                                                                                                                                                                                               |
+| --------------------------- | ------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| county_center_lat           |         | Latitude component of centroid coordinates or geometric center of the county  | U.S. Census 2016 Gazetteer Files                                                                                                                                                                                                                     |
+| county_center_long          |         | Longitude component of centroid coordinates or geometric center of the county | [''](https://en.wikipedia.org/wiki/Ditto_mark)                                                                                                                                                                                                       |
+| total_population            |         | County population count                                                       | U.S. Census 2012-2016 5-yr American Community Survey                                                                                                                                                                                                 |
+| total_employment            |         | County-only employment count                                                  | U.S. Census 2016 County Business Patterns                                                                                                                                                                                                            |
+| utility_customers           |         | Estimated electric utility or natural gas customers                           | NREL GIS mapping based on Ventyx/ABB Data and 2016 Energy Information Administration Survey Form 861                                                                                                                                                 |
+| electric_consumption        | MWH     | Estimated total consumption of electricity by residential buildings           | Ma, Ookie, Ricardo Oliveira, Evan Rosenlieb, and Megan Day. 2019. Sector-Specific Methodologies for Subnational Energy Modeling. Golden, CO: National Renewable Energy Laboratory. NREL/TP-7A40-72748. https://www.nrel.gov/docs/fy19osti/72748.pdf. |
+| electric_expenditure        | '000 $  | Estimated total expenditure of electricity by residential buildings           | ''                                                                                                                                                                                                                                                   |
+| electric_consumption_capita | MWH     | Estimated per capita consumption of electricity by residential buildings      | ''                                                                                                                                                                                                                                                   |
+| electric_expenditure_capita | '000 $  | Estimated per capita expenditure of electricity by residential buildings      | ''                                                                                                                                                                                                                                                   |
+| gas_consumption             | gallons | Modeled gasoline consumption by on-road vehicles within the county            | ''                                                                                                                                                                                                                                                   |
+| gas_consumption_capita      | gallons | Modeled gasoline consumption per capita by on-road vehicles within the county | ''                                                                                                                                                                                                                                                   |
+| diesel_consumption          | gallons | Modeled diesel consumption by on-road vehicles within the selected county     | ''                                                                                                                                                                                                                                                   |
+| diesel_consumption_capita   | gallons | Modeled diesel consumption per capita by on-road vehicles within the county   | ''                                                                                                                                                                                                                                                   |
+| county_vehicle_miles        | miles   | Estimated total vehicle miles for all on-road travel within the county        | See methodology posted at: www.eere.energy.gov/sled under transportation.                                                                                                                                                                            |
+| county_vehicle_miles_capita | miles   | Estimated vehicle miles per capita for all on-road travel within the county   | ''                                                                                                                                                                                                                                                   |
+
+## Dataframe Snippet
+
+<div><style>
+.dataframe > thead > tr > th,
+.dataframe > tbody > tr > td {
+  text-align: right;
+  white-space: pre-wrap;
+}
+</style>
+<small>shape: (5, 26)</small><table border="1" class="dataframe"><thead><tr><th>fips</th><th>county_center_lat</th><th>county_center_long</th><th>total_population</th><th>total_employment</th><th>electric_consumption</th><th>electric_expenditure</th><th>electric_consumption_capita</th><th>electric_expenditure_capita</th><th>utility_customers</th><th>gas_consumption</th><th>gas_consumption_capita</th><th>diesel_consumption</th><th>diesel_consumption_capita</th><th>county_vehicle_miles</th><th>county_vehicle_miles_capita</th><th>rent</th><th>food</th><th>child_care</th><th>transportation</th><th>health_care</th><th>other</th><th>taxes</th><th>total</th><th>total_annual</th><th>state_cost_rank</th></tr><tr><td>i64</td><td>f64</td><td>f64</td><td>i64</td><td>i64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>f64</td><td>i64</td></tr></thead><tbody><tr><td>1001</td><td>32.532237</td><td>-86.64644</td><td>55049</td><td>21580</td><td>315398.03</td><td>39864.24</td><td>5.73</td><td>0.72</td><td>22120.35</td><td>2.5332114e7</td><td>460.17</td><td>1.1506887e7</td><td>209.03</td><td>7.40266187e8</td><td>13447.4</td><td>1005.6252</td><td>832.00439</td><td>1318.7245</td><td>1226.9673</td><td>1443.2594</td><td>665.8457</td><td>930.72919</td><td>7423.1558</td><td>89077.867</td><td>2</td></tr><tr><td>1003</td><td>30.659218</td><td>-87.746067</td><td>199510</td><td>122682</td><td>1.0648e6</td><td>126826.1</td><td>5.34</td><td>0.64</td><td>127891.23</td><td>1.16066055e8</td><td>581.76</td><td>4.2975312e7</td><td>215.4</td><td>3.2398e9</td><td>16238.87</td><td>922.0</td><td>894.46722</td><td>1279.0166</td><td>1230.6757</td><td>1407.3345</td><td>658.17773</td><td>905.60223</td><td>7297.2739</td><td>87567.289</td><td>3</td></tr><tr><td>1005</td><td>31.870253</td><td>-85.405104</td><td>26614</td><td>13613</td><td>136097.79</td><td>17085.49</td><td>5.11</td><td>0.64</td><td>11493.55</td><td>1.4909195e7</td><td>560.2</td><td>4.016334e6</td><td>150.91</td><td>3.91131704e8</td><td>14696.46</td><td>648.0</td><td>779.53564</td><td>970.38959</td><td>1134.322</td><td>1415.9928</td><td>517.25244</td><td>671.02472</td><td>6136.5171</td><td>73638.203</td><td>56</td></tr><tr><td>1007</td><td>33.015893</td><td>-87.127148</td><td>22572</td><td>6699</td><td>117401.41</td><td>14857.93</td><td>5.2</td><td>0.66</td><td>8737.51</td><td>1.1806243e7</td><td>523.05</td><td>3.776567e6</td><td>167.31</td><td>3.20513006e8</td><td>14199.58</td><td>814.96014</td><td>734.56244</td><td>1149.8549</td><td>1270.2726</td><td>1470.203</td><td>561.45313</td><td>807.85223</td><td>6809.1582</td><td>81709.898</td><td>11</td></tr><tr><td>1009</td><td>33.977358</td><td>-86.56644</td><td>57704</td><td>12557</td><td>328465.62</td><td>41577.25</td><td>5.69</td><td>0.72</td><td>23226.66</td><td>2.3520539e7</td><td>407.61</td><td>9.996834e6</td><td>173.24</td><td>6.73272458e8</td><td>11667.69</td><td>740.57007</td><td>784.53271</td><td>1097.9984</td><td>1271.1036</td><td>1470.203</td><td>552.60486</td><td>786.56378</td><td>6703.5767</td><td>80442.922</td><td>14</td></tr></tbody></table></div>
