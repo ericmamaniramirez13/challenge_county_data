@@ -3,12 +3,12 @@ import polars as pl
 # %%
 # ENERGY DATA
 # Energy data was found [here](https://data.openei.org/files/149/2016cityandcountyenergyprofiles.xlsb) and shaped manually in Excel before exporting to the dataset below.
-nrg = pl.read_parquet("./source/energy.parquet")
+nrg = pl.read_parquet("https://github.com/JustinMorley/apt103_county_data/raw/source-branch/cost_of_living_and_transportation/source/energy.parquet")
 nrg.head()
 # %%
 # COST OF LIVING
 # https://raw.githubusercontent.com/williamrichards001/Data-science/main/cost%20of%20living%20again.csv
-living_cost = pl.read_parquet("./source/cost-of-living.parquet")
+living_cost = pl.read_parquet("https://github.com/JustinMorley/apt103_county_data/raw/source-branch/cost_of_living_and_transportation/source/cost-of-living.parquet")
 living_cost.head()
 # %% 
 # Join Datasets on FIPS
