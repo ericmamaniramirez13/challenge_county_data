@@ -15,7 +15,7 @@
 | total_annual | Average annual total cost of living |
 | state_cost_rank | Rank for each state based on cost of living |
 
-## Transportation Dataset
+## [City County Energy Profiles](https://www.osti.gov/biblio/1788084)
 > Dataset Completed: 12/3/2019
 <br><br>
 This City and County Energy Profiles data lookup table provides modeled electricity and natural gas consumption and expenditures, on-road vehicle fuel consumption, and vehicle miles traveled for each U.S. city and county. Please note this data is modeled and more precise data may be available from regional, state, or other sources. The modeling approach for electricity and natural gas is described in Sector-Specific Methodologies for Subnational Energy Modeling: https://www.nrel.gov/docs/fy19osti/72748.pdf. For feedback or questions please contact: slope@nrel.gov.
