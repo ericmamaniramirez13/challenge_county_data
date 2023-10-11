@@ -49,14 +49,27 @@ df_zhvi = df_zhvi.select(['CombinedFIPS'] + [col for col in df_zhvi.columns if c
 
 df_zhvi.head()
 
-
 zhvi = df_fips.join(df_zhvi, left_on="fips", right_on="CombinedFIPS", how="left")
 mask = zhvi["name"].str.to_uppercase() != zhvi["name"]
 zhvi = zhvi.filter(mask)
 zhvi = zhvi.drop(["state", "RegionID", "name"])
 zhvi.head()
 # zhvi.write_csv("output_zhvi.csv")
-print(zhvi.shape)
+# print(zhvi.shape)
+
+# this is going to calculate the % growth for each county - from 2001 onward (assuming that they have iinfo from 2000)
+months = [col for col in zhvi.columns if '-' in col]
+
+for month in months:
+    year, m, _ = month.split('-')
+    last_year = str(int(year) - 1)
+    prev_month_col = f"{last_year}-{m}-31"
+
+    if prev_month_col in months:
+        growth_col_name = f"Growth_{month}"
+
+        growth_rate = 100 * (zhvi[month] - zhvi[prev_month_col]) / zhvi[prev_month_col]
+        zhvi = zhvi.with_columns(growth_rate.alias(growth_col_name))
 
 lslice = 500
 values = list(range(0, zhvi.shape[0], lslice))
@@ -69,4 +82,5 @@ for i in values:
     zhvi.slice(i, lslice).write_parquet("zhvi_slices/zhvi_" + str(i) +".parquet")
 # To read them back in:
 # df_zhvi = pl.read_parquet("zhvi_slices/*")
-# df_zhvi.shape
+print(zhvi.shape)
+print(zhvi.head())
