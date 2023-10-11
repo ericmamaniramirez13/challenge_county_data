@@ -49,7 +49,6 @@ df_zhvi = df_zhvi.select(['CombinedFIPS'] + [col for col in df_zhvi.columns if c
 
 df_zhvi.head()
 
-
 zhvi = df_fips.join(df_zhvi, left_on="fips", right_on="CombinedFIPS", how="left")
 mask = zhvi["name"].str.to_uppercase() != zhvi["name"]
 zhvi = zhvi.filter(mask)
@@ -71,8 +70,6 @@ for month in months:
 
         growth_rate = 100 * (zhvi[month] - zhvi[prev_month_col]) / zhvi[prev_month_col]
         zhvi = zhvi.with_columns(growth_rate.alias(growth_col_name))
-
-
 
 lslice = 500
 values = list(range(0, zhvi.shape[0], lslice))
