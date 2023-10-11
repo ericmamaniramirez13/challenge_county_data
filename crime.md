@@ -6,9 +6,9 @@ This folder contains the crime dataset for the temple estimation project.
 
 ## Data Dictionary
 
-| Column Name | Description | Importance |
+| Column Name | Description | Type |
 | --- | --- | --- |
-| fips | Federal Information Processing ID for counties. Must have the same number of rows as `county_meta` data (3146 total). | Key Column |
+| fips | Federal Information Processing ID for counties. Must have the same number of rows as `county_meta` data (3146 total). | int64 |
 | crime_rate_per_100000 | The crime rate per 100,000 people in a county | float |
 | MURDER | The total number of murder charges | int64 |
 | RAPE | The total number of rape charges | int64 |
