@@ -1,11 +1,6 @@
 # %%
 import polars as pl
-import plotly.express as px
-from datetime import datetime, timedelta
-import polars.selectors as cs
 import urllib.request
-import json
-import numpy as np
 
 #%%
 # Now get all the counties -- this is how I got the counties
@@ -35,8 +30,9 @@ counties = counties.select(
 # Get relevant disaster data
 # Data dictionary
 # https://www.fema.gov/openfema-data-page/disaster-declarations-summaries-v2
-# Data download
-# https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries.csv
+
+# Download the data
+urllib.request.urlretrieve('https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries.csv', 'disasters/DisasterDeclarationsSummaries.csv')
 
 # Based on the link, and looking at data for hurricane katrina, it seems like the counties
 # where these programs were declared determines whether it was actually a serious disaster,
@@ -104,12 +100,40 @@ filtered = labeledCounties.with_columns(
     (pl.col('Coastal Storm') > 0).alias('Coastal Storm'),
     (pl.col('Typhoon') > 0).alias('Typhoon'),
 )
-filtered.write_parquet('disasters/disasters_wide.parquet', use_pyarrow=True)
-filtered.head()
+#%%
+# Now write it properly distributed
+# filtered.write_parquet('disasters/', use_pyarrow=True, pyarrow_options={'partition_cols':['disasters']})
+# fileterd.write_dataset(
+#         data,
+#         'disasters/',
+#         format="parquet",
+#         min_rows_per_group=1000,
+#         max_rows_per_group=1000,
+#         partitioning=ds.partitioning(pa.schema([("type", pa.string())])),
+#         existing_data_behavior="overwrite_or_ignore"
+#     )
+# The size each will be
+size = len(filtered) // 5
+# Split them all up into a list of smaller datasets
+split = [filtered[size*i:size*(i+1)] for i in range(4)]
+# Becuase we're doing // instead of /, we might have an off-by-one error.
+# This fixes that.
+split.append(filtered[size*4:])
+assert sum(map(len, split)) == len(filtered), "You split the dataset wrong"
+
+# NOW actually write the data
+for cnt, data in enumerate(split):
+    data.write_parquet(f'disasters/disasters_{cnt}.parquet', use_pyarrow=True)
+
 
 # %%
+filtered
 # Just some quick code to make a long formatted version
-filtered.melt('fips', variable_name='disaster')\
-    .filter(pl.col('value').cast(pl.Boolean))\
-    .drop('value')\
-    .write_parquet('disasters/disasters_long.parquet', use_pyarrow=True)
+# filtered.melt('fips', variable_name='disaster')\
+#     .filter(pl.col('value').cast(pl.Boolean))\
+#     .drop('value')\
+#     .write_parquet('disasters/disasters_long.parquet', use_pyarrow=True)
+#%%
+# Now go through and delete all the files we don't need anymore
+%cd disasters
+%rm counties.csv counties.txt DisasterDeclarationsSummaries.csv
