@@ -8,6 +8,7 @@ nrg.head()
 # %%
 # COST OF LIVING
 # https://raw.githubusercontent.com/williamrichards001/Data-science/main/cost%20of%20living%20again.csv
+# The above CSV was just converted to the Parquet below with no additional changes.
 living_cost = pl.read_parquet("https://github.com/JustinMorley/apt103_county_data/raw/source-branch/cost_of_living_and_transportation/source/cost-of-living.parquet")
 living_cost.head()
 # %% 
