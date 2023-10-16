@@ -48,3 +48,18 @@ Last 5 columns:
 |  2 |             1.21863 |             2.24482 |            3.66391  |             1.83544 |             0.14776 |
 |  3 |             5.11268 |             3.44227 |            3.65038  |             1.15784 |            -0.14049 |
 |  4 |             6.06723 |             2.19812 |           -0.142145 |            -1.05954 |            -1.41448 |
+
+
+
+## Images to show data use case
+
+![ZHVI Score over time](./images/zhvi_1.png)
+![ZHVI Growth Rate over time](./images/zhvi_2.png)
+
+#### fips codes for reference
+
+* 6037 - Los Angeles County, CA
+* 17031 -  Cook County, IL
+* 48201 - Harris County, TX
+* 4013 - Maricopa County, AZ
+* 6073 - San Diego County, CA
