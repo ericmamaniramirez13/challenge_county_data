@@ -70,8 +70,8 @@ filtered = labeledCounties.with_columns(
     # I'm justifying this because after making a grpah, it's not nearly as widespread
     # as i assumed. I think they're only counting wildfires after all
     (pl.col('Fire') > 0).alias('Fire'),
-    (pl.col('Flood') > 3).alias('Flood'),
-    (pl.col('Severe Storm') > 3).alias('Severe Storm'),
+    (pl.col('Flood') > 1).alias('Flood'),
+    (pl.col('Severe Storm') > 0).alias('Severe Storm'),
     # ANY tonadoes are bad
     (pl.col('Tornado') > 0).alias('Tornado'),
     # By looking at https://www.fema.gov/disaster/how-declared, it looks like
