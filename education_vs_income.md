@@ -34,23 +34,8 @@ Agreagated data by state and showing states with higher level of education have 
 
 ## Data Snippet
 
-| county_FIP | state | county     | per_capita | … | associate | bachelor_ | associate | bachelor_ |
-| S          |       |            | _personal_ |   | _degree_n | degree_nu | _degree_p | degree_pe |
-|            |       |            | income_201 |   | umbers_20 | mbers_201 | ercentage | rcentage_ |
-|            |       |            | 9          |   | 16_20…    | 6_202…    | _2016…    | 2015_…    |
-|------------|-------|------------|------------|---|-----------|-----------|-----------|-----------|
-| 51013      | VA    | Arlington, | 97629      | … | 19573     | 132394    | 11.21     | 75.84     |
-|            |       | VA         |            |   |           |           |           |           |
-| 35028      | NM    | Los        | 72366      | … | 2766      | 9098      | 20.54     | 67.56     |
-|            |       | Alamos, NM |            |   |           |           |           |           |
-| 8013       | CO    | Boulder,   | 79698      | … | 45834     | 135876    | 21.24     | 62.97     |
-|            |       | CO         |            |   |           |           |           |           |
-| 24027      | MD    | Howard, MD | 78013      | … | 42538     | 136792    | 19.49     | 62.67     |
-| …          | …     | …          | …          | … | …         | …         | …         | …         |
-| 28055      | MS    | Issaquena, | 24805      | … | 271       | 34        | 27.07     | 3.4       |
-|            |       | MS         |            |   |           |           |           |           |
-| 2158       | AK    | Kusilvak   | 31050      | … | 854       | 132       | 21.11     | 3.26      |
-|            |       | Census     |            |   |           |           |           |           |
-|            |       | Area, AK   |            |   |           |           |           |           |
-| 48261      | TX    | Kenedy, TX | 43786      | … | 16        | 4         | 5.93      | 1.48      |
-| 48301      | TX    | Loving, TX | 108522     | … | 72        | 0         | 81.82     | 0.0       |
+|    |   county_FIPS | state   | county         |   per_capita_personal_income_2019 |   per_capita_personal_income_2020 |   per_capita_personal_income_2021 |   associate_degree_numbers_2016_2020 |   bachelor_degree_numbers_2016_2020 |   associate_degree_percentage_2016_2020 |   bachelor_degree_percentage_2015_2019 |
+|---:|--------------:|:--------|:---------------|----------------------------------:|----------------------------------:|----------------------------------:|-------------------------------------:|------------------------------------:|----------------------------------------:|---------------------------------------:|
+|  0 |         51013 | VA      | Arlington, VA  |                             97629 |                            100687 |                            107603 |                                19573 |                              132394 |                                   11.21 |                                  75.84 |
+|  1 |         35028 | NM      | Los Alamos, NM |                             72366 |                             75949 |                             81306 |                                 2766 |                                9098 |                                   20.54 |                                  67.56 |
+|  2 |          8013 | CO      | Boulder, CO    |                             79698 |                             83173 |                             89593 |                                45834 |                              135876 |                                   21.24 |                                  62.97 |
